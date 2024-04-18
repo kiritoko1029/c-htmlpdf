@@ -24,18 +24,33 @@
 * 使用说明
 
 ```js 
- let pdf =  new PdfLoader(<ele>,<pdfFileName>,[splitClassName],[breakClassName])
+ let pdf =  new PdfLoader(<ele>,<pdfFileName>,[width],[height],[orientation],[splitClassName],[breakClassName])
 ```
 >  * ele:需要导出pdf的容器元素(dom节点 不是id)
 > * pdfFileName: 导出文件的名字 通过调用outPutPdfFn方法也可传参数改变
+> * width: pdf宽度 默认为595
+> * height: pdf高度 默认为842
+> * orientation: pdf方向 默认为p,可选值为p和l，或者portrait和landscape
 > * splitClassName: 避免分段截断的类名 当pdf有多页时需要传入此参数 , 避免pdf分页时截断元素  如表格<tr class="itemClass"></tr>
 > * 调用方式 先 let pdf = new PdfLoader(ele, 'pdf' ,'itemClass');
 > * 若想改变pdf名称 pdf.outPutPdfFn(fileName);  outPutPdfFn方法返回一个promise 可以使用then方法处理pdf生成后的逻辑
 > *  breakClassName:自定义分页符类名，默认为break_page,添加改类名的标签被自动分页到下一页
+
+* 获取jsPDF实例
+```js
+    pdf.genPdf(jsPDF=>{
+        console.log(jsPDF)
+    })
+```
+
+* 输出下载pdf
 ```js
  pdf.outPutPdfFn([fileName]) 
 ```
- > *输出下载pdf
+* 预览pdf
+```js
+    pdf.previewPdf()
+```
  * 效果演示
 1. 正常效果
 ![](https://img-blog.csdnimg.cn/img_convert/a4b60e448db39a4d067e76a6ae40dbbb.png)
