@@ -1,7 +1,7 @@
 import jsPDF from "jspdf";
 import html2canvas from "html2canvas";
 
-/* 2.1版本，新增分页符功能，修复滚动元素渲染问题 */
+/* 2.1版本，新增分页符功能，修复滚动元素渲染问题，优化样式处理策略 */
 /* author:kirk */
 /*
 * 使用说明
@@ -67,22 +67,15 @@ class PdfLoader {
                 scrollLeft: element.scrollLeft,
                 overflow: element.style.overflow,
                 overflowX: element.style.overflowX,
-                overflowY: element.style.overflowY,
-                height: element.style.height,
-                maxHeight: element.style.maxHeight,
-                maxWidth: element.style.maxWidth,
-                width: element.style.width
+                overflowY: element.style.overflowY
             };
             
             scrollableElements.push(originalState);
             
-            // 临时修改样式
+            // 临时修改样式 - 只修改 overflow 相关属性
             element.style.overflow = 'visible';
             element.style.overflowX = 'visible';
             element.style.overflowY = 'visible';
-            element.style.height = 'auto';
-            element.style.maxHeight = 'none';
-            element.style.maxWidth = 'none';
             element.scrollTop = 0;
             element.scrollLeft = 0;
         }
@@ -102,10 +95,6 @@ class PdfLoader {
             el.style.overflow = state.overflow;
             el.style.overflowX = state.overflowX;
             el.style.overflowY = state.overflowY;
-            el.style.height = state.height;
-            el.style.maxHeight = state.maxHeight;
-            el.style.maxWidth = state.maxWidth;
-            el.style.width = state.width;
             el.scrollTop = state.scrollTop;
             el.scrollLeft = state.scrollLeft;
         });

@@ -1,6 +1,6 @@
 {
   "name": "c-htmlpdf",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "A tool script for converting HTML elements to PDF with TypeScript support, modified based on k-htmlpdf",
   "main": "index.js",
   "types": "index.d.ts",
