@@ -59,8 +59,6 @@
 3. 自动换页，防止切割
 ![](https://img-blog.csdnimg.cn/img_convert/8037086b976b24b52a99c89690d0650b.png)
 
-* gitee 仓库 
-[https://gitee.com/kirk958617/c-htmlpdf](https://gitee.com/kirk958617/c-htmlpdf)
 * github 仓库 
-[https://github.com/manongguai/c-htmlpdf](https://github.com/manongguai/c-htmlpdf)
+[https://github.com/kiritoko1029/c-htmlpdf](https://github.com/kiritoko1029/c-htmlpdf)
 
