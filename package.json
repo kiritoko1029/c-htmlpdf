@@ -1,17 +1,18 @@
 {
-  "name": "k-htmlpdf",
-  "version": "1.0.4",
-  "description": "",
+  "name": "c-htmlpdf",
+  "version": "1.1.0",
+  "description": "A tool script for converting HTML elements to PDF with TypeScript support, modified based on k-htmlpdf",
   "main": "index.js",
+  "types": "index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "kirk",
   "repository": {
     "type": "git",
-    "url": "https://gitee.com/kirk958617/k-htmlpdf"
+    "url": "https://github.com/kiritoko1029/c-htmlpdf"
   },
-  "homepage": "https://gitee.com/kirk958617/k-htmlpdf/blob/master/readme.md",
+  "homepage": "https://github.com/kiritoko1029/c-htmlpdf/blob/master/readme.md",
   "license": "ISC",
   "dependencies": {
     "html2canvas": "^1.4.1",
@@ -23,6 +24,14 @@
     "pdf",
     "vue",
     "html2canvas",
-    "js"
+    "js",
+    "typescript",
+    "types"
+  ],
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "readme.md",
+    "typescript-usage.md"
   ]
 }
